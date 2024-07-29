@@ -8,8 +8,7 @@ export async function GET() {
     .from(`concept_search`)
     .select()
     .textSearch('fts', `'paracetamol:*'`)
-    .eq('vocabulary_id', 'ICD10PCS')
-    .limit(15);
+    .limit(150);
 
   return NextResponse.json({
     data,
