@@ -14,9 +14,7 @@
   "overrides": [
     {
       "files": ["*.stories.@(ts|tsx|js|jsx|mjs|cjs)"],
-      "rules": {
-        // example of overriding a rule
-      }
+      "rules": {}
     }
   ]
 }
