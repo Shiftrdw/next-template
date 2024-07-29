@@ -15,7 +15,6 @@
 # production
 /build
 
-/models
 models/*
 
 # misc
