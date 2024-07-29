@@ -15,6 +15,9 @@
 # production
 /build
 
+/models
+models/*
+
 # misc
 .DS_Store
 *.pem

@@ -2,7 +2,7 @@ import { createClient } from '@/utils/supabase/server';
 import { env, pipeline } from '@xenova/transformers';
 import { NextResponse } from 'next/server';
 
-const model_name = '../../../../models/pubmed-bert';
+const model_name = 'pubmed-bert-onnx';
 // Specify a custom location for models (defaults to '/models/').
 env.localModelPath = '../../../../models';
 
@@ -12,7 +12,7 @@ env.allowRemoteModels = false;
 export async function GET() {
   const query = 'healthy';
 
-  const extractor = await pipeline('feature-extraction', 'pubmed-bert', {
+  const extractor = await pipeline('feature-extraction', model_name, {
     revision: 'default',
   });
 
